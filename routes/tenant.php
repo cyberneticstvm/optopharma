@@ -32,20 +32,11 @@ Route::middleware([
     })->name('login');
     Route::post('/', [AuthController::class, 'login'])->name('login');
 });
-
-/*Route::middleware([
+Route::middleware([
     'web', 'auth',
     InitializeTenancyByDomain::class,
-    PreventAccessFromCentralDomains::class,
-])->prefix('tenant')->group(function () {
-    Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
-    Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
-});*/
-
-Route::group([
-    'prefix' => '/{vijo}',
-    'middleware' => [InitializeTenancyByPath::class],
-], function () {
+    /*PreventAccessFromCentralDomains::class,*/
+])->group(function () {
     Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
     Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
 });
