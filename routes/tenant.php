@@ -43,7 +43,7 @@ Route::middleware([
 });*/
 
 Route::group([
-    'prefix' => '/{tenant}',
+    'prefix' => '/{vijo}',
     'middleware' => [InitializeTenancyByPath::class],
 ], function () {
     Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
