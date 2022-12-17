@@ -26,6 +26,8 @@ class AuthController extends Controller
     }
 
     public function logout(){
+        echo 'hai';
+        die;
         Session::flush();        
         Auth::logout();
         return view('tenant.login');
