@@ -34,7 +34,7 @@ Route::middleware([
 });
 
 Route::middleware([
-    'web', 'auth',
+    'web',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
