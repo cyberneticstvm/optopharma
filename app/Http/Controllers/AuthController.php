@@ -15,6 +15,8 @@ class AuthController extends Controller
         ]);
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
+            echo 'hai';
+            die;
             return redirect()->intended('dash')
                         ->with('success', 'You have signed in successfully.');
         }
