@@ -37,7 +37,7 @@ Route::middleware([
     'web', 'auth',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
-])->group(function () {
-    Route::get('{subdomain}.w3elements.net/dash/', [AuthController::class, 'dash'])->name('dash');
+])->prefix('tenant')->group(function () {
+    Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
     Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
 });
