@@ -17,7 +17,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             echo 'hai';
             die;
-            return redirect()->intended('dash')
+            return redirect()->route('dash')
                         ->with('success', 'You have signed in successfully.');
         }
         return redirect()->route('login')->with('error', 'Login details are not valid');
