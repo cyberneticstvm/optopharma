@@ -15,8 +15,6 @@ class AuthController extends Controller
         ]);
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            echo Auth::user()->name;
-            die;
             return redirect()->route('dash')
                         ->with('success', 'You have signed in successfully.');
         }
@@ -24,6 +22,8 @@ class AuthController extends Controller
     }
 
     public function dash(){
+        echo Auth::user()->name;
+        die;
         return view('tenant.dash');
     }
 
