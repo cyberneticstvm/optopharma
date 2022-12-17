@@ -31,7 +31,6 @@ Route::middleware([
         return view('tenant.login');
     })->name('login');
     Route::post('/', [AuthController::class, 'login'])->name('login');
-    Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
 });
 
 Route::middleware([
