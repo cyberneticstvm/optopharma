@@ -31,15 +31,15 @@ class TenantRegistrationController extends Controller
             $db_pwd = Str::random(10);                
             $tenant = Tenant::create([
                 'id' => $request->domain,
-                /*'tenancy_db_username' => $request->domain,
-                'tenancy_db_password' => $db_pwd,*/
+                'tenancy_db_username' => $request->domain,
+                'tenancy_db_password' => $db_pwd,
             ]);
             $tenant->domains()->create(['domain' => $request->domain.'.'.$this->central_domain]);                
             DB::table('users')->insert(['name' => $request->name, 'email' => $request->email, 'tenant_id' => $request->domain, 'domain' => $request->domain.'.'.$this->central_domain,'db_name' => $this->db_prefix.$request->domain, 'db_password' => $db_pwd,'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
             Config::set('database.connections.mysql_tenant.database', $this->db_prefix.$request->domain);
             DB::reconnect('mysql_tenant');
-            //Config::set('database.connections.mysql.username', $request->domain);
-            //Config::set('database.connections.mysql.password', $db_pwd);
+            Config::set('database.connections.mysql.username', $request->domain);
+            Config::set('database.connections.mysql.password', $db_pwd);
             DB::connection('mysql_tenant')->table('users')->insert(['name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password)]);
             //Config::set('database.connections.mysql.database', env('DB_DATABASE', 'forge'));
             DB::reconnect('mysql');                        
