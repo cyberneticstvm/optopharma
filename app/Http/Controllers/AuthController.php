@@ -16,7 +16,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             //return view('tenant.dash');
-            return redirect()->route('dash')->with('success', 'You have signed in successfully.');
+            return redirect()->route('dash');//->with('success', 'You have signed in successfully.');
         }
         return redirect()->route('login')->with('error', 'Login details are not valid');
     }
@@ -28,6 +28,6 @@ class AuthController extends Controller
     public function logout(){
         Session::flush();        
         Auth::logout();
-        return redirect()->route('login')->with('success', 'User has been logged out successfully.');
+        return redirect()->route('login');//->with('success', 'User has been logged out successfully.');
     }
 }
