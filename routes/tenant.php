@@ -31,6 +31,7 @@ Route::middleware([
         return view('tenant.login');
     })->name('login');
     Route::post('/', [AuthController::class, 'login'])->name('login');
+    Route::get('/test', [AuthController::class, 'test'])->name('test');
 });
 /*Route::middleware([
     'web',
@@ -46,9 +47,8 @@ Route::middleware([
 });*/
 
 Route::group([
-    'middleware' => ['web', InitializeTenancyByDomain::class, PreventAccessFromCentralDomains::class],
+    'middleware' => ['web', 'auth', InitializeTenancyByDomain::class, PreventAccessFromCentralDomains::class],
 ], function(){
     Route::get('/dash', [AuthController::class, 'dash'])->name('dash');
-    Route::get('/test', [AuthController::class, 'test'])->name('test');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
