@@ -33,9 +33,9 @@ Route::middleware([
     Route::post('/', [AuthController::class, 'login'])->name('login');
 });
 Route::middleware([
-    'web', 'auth',
-    /*InitializeTenancyByDomain::class,
-    PreventAccessFromCentralDomains::class,*/
+    'tenancy', 'web', 'auth',
+    InitializeTenancyByDomain::class,
+    PreventAccessFromCentralDomains::class,
 ])->group(function () {
     Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
     Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
