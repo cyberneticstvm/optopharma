@@ -49,8 +49,6 @@ Route::middleware([
     PreventAccessFromCentralDomains::class
     ])->prefix('api')->group(function () {
     //
-    Route::name('api.')->namespace('App\Http\Controllers\Api')->group(function () {
-        Route::get('dash', [AuthController::class, 'dash'])->name('dash');
-        Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-    });
+    Route::get('dash', [AuthController::class, 'dash'])->name('dash');
+    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 });
