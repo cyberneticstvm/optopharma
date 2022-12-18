@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
+    #r
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
