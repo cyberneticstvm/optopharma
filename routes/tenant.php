@@ -20,8 +20,8 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-/*Route::middleware([
-    'web',
+Route::middleware([
+    'web', 'auth',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
@@ -31,7 +31,7 @@ use App\Http\Controllers\AuthController;
         return view('tenant.login');
     })->name('login');
     Route::post('/', [AuthController::class, 'login'])->name('login');
-});*/
+});
 Route::middleware([
     'web', 'auth',
     InitializeTenancyByDomain::class,
