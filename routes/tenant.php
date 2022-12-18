@@ -32,7 +32,7 @@ use App\Http\Controllers\AuthController;
     })->name('login');
     Route::post('/', [AuthController::class, 'login'])->name('login');
 });*/
-Route::middleware([
+/*Route::middleware([
     'web',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
@@ -43,5 +43,15 @@ Route::middleware([
     Route::post('/', [AuthController::class, 'login'])->name('login');
     Route::get('/dash', [AuthController::class, 'dash'])->name('dash');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-});
+});*/
 
+Rote::group([
+    'middleware' => ['web', InitializeTenancyByDomain::class, PreventAccessFromCentralDomains::class],
+], function(){
+    Route::get('/', function () {
+        return view('tenant.login');
+    })->name('login');
+    Route::post('/', [AuthController::class, 'login'])->name('login');
+    Route::get('/dash', [AuthController::class, 'dash'])->name('dash');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
