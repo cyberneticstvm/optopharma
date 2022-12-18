@@ -29,4 +29,8 @@ class AuthController extends Controller
         Auth::logout();
         return redirect()->route('login')->with('success', 'User has been logged out successfully.');
     }
+
+    public function test(){
+        return view('tenant.test');
+    }
 }
