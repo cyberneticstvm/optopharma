@@ -48,4 +48,8 @@ class TenantRegistrationController extends Controller
         }        
         return redirect()->route('index')->with('success','Tenant created successfully');
     }
+
+    public function test(){
+        return view('landlord.test');
+    }
 }
