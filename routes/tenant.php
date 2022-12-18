@@ -41,14 +41,7 @@ Route::middleware([
         return view('tenant.login');
     })->name('login');
     Route::post('/', [AuthController::class, 'login'])->name('login');
-    
+    Route::get('/dash', [AuthController::class, 'dash'])->name('dash');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::middleware([
-    InitializeTenancyByDomain::class,
-    PreventAccessFromCentralDomains::class
-    ])->prefix('api')->group(function () {
-    //
-    Route::get('dash', [AuthController::class, 'dash'])->name('dash');
-    Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-});
