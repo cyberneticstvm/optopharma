@@ -45,7 +45,7 @@ use App\Http\Controllers\AuthController;
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });*/
 
-Rote::group([
+Route::group([
     'middleware' => ['web', InitializeTenancyByDomain::class, PreventAccessFromCentralDomains::class],
 ], function(){
     Route::get('/', function () {
