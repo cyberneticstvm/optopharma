@@ -20,7 +20,7 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::middleware([
+/*Route::middleware([
     'web', 'auth',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
@@ -31,12 +31,16 @@ Route::middleware([
         return view('tenant.login');
     })->name('login');
     Route::post('/', [AuthController::class, 'login'])->name('login');
-});
+});*/
 Route::middleware([
     'web', 'auth',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
+    Route::get('/', function () {
+        return view('tenant.login');
+    })->name('login');
+    Route::post('/', [AuthController::class, 'login'])->name('login');
     Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
     Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
 });
