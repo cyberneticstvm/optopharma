@@ -33,7 +33,7 @@ use App\Http\Controllers\AuthController;
     Route::post('/', [AuthController::class, 'login'])->name('login');
 });*/
 Route::middleware([
-    'web', 'auth',
+    'web',
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
