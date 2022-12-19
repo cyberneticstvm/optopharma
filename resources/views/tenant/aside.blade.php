@@ -73,25 +73,31 @@
           <div class="collapse" id="admins">
             <ul class="nav nav-sm flex-column">
               <li class="nav-item">
-                <a class="nav-link text-white " href="/"0>
+                <a class="nav-link text-white " href="/users/">
                   <i class='fa fa-users sidenav-mini-icon'></i>
                   <span class="sidenav-normal ms-2 ps-1">Users</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white " href="/">
+                <a class="nav-link text-white " href="/roles/">
+                  <i class='fa fa-key sidenav-mini-icon'></i>
+                  <span class="sidenav-normal ms-2 ps-1">Roles & Permissions</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " href="/branches/">
                   <i class="fa fa-code-fork sidenav-mini-icon"></i>
                   <span class="sidenav-normal ms-2 ps-1">Branches</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white " href="/">
+                <a class="nav-link text-white " href="/suppliers/">
                   <i class="fa fa-truck sidenav-mini-icon"></i>
                   <span class="sidenav-normal ms-2 ps-1">Suppliers</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white " href="/">
+                <a class="nav-link text-white " href="/heads/">
                   <i class="fa fa-header sidenav-mini-icon"></i>
                   <span class="sidenav-normal ms-2 ps-1">Heads</span>
                 </a>

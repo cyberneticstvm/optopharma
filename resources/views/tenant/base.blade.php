@@ -33,7 +33,8 @@
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <link href="{{ public_path().'/tenant/css/nucleo-svg.css' }}" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="{{ public_path().'/tenant/css/soft-ui-dashboard.css?v=1.0.7' }}" rel="stylesheet" />
+  <link id="pagestyle" href="{{ public_path().'/tenant/css/soft-ui-dashboard.min.css?v=1.0.7' }}" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="{{ public_path().'/tenant/css/datatables.min.css' }}">
   <link id="pagestyle" href="{{ public_path().'/tenant/css/style.css' }}" rel="stylesheet" />
 </head>
 
@@ -134,12 +135,14 @@
     </div>
   </div>
   <!--   Core JS Files   -->
+  <script src="{{ public_path().'/tenant/js/jquery.min.js' }}"></script>
   <script src="{{ public_path().'/tenant/js/core/popper.min.js' }}"></script>
   <script src="{{ public_path().'/tenant/js/core/bootstrap.min.js' }}"></script>
   <script src="{{ public_path().'/tenant/js/plugins/perfect-scrollbar.min.js' }}"></script>
   <script src="{{ public_path().'/tenant/js/plugins/smooth-scrollbar.min.js' }}"></script>
-  <script src="{{ public_path().'/tenant/js/plugins/chartjs.min.js' }}"></script>
-  <script src="{{ public_path().'/tenant/js/jquery.min.js' }}"></script>
+  <script type="text/javascript" charset="utf8" src="{{ public_path().'/tenant/js/plugins/datatables.min.js' }}"></script>
+  <script src="{{ public_path().'/tenant/js/plugins/chartjs.min.js' }}"></script>  
+  <script src="{{ public_path().'/tenant/js/custom.js' }}"></script>  
   <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 

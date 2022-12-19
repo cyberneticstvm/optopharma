@@ -7,6 +7,7 @@ use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,14 @@ Route::middleware([
 Route::group([
     'middleware' => ['web', 'auth', InitializeTenancyByDomain::class, PreventAccessFromCentralDomains::class],
 ], function(){
-    Route::get('/dash', [AuthController::class, 'dash'])->name('dash');
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
+
+    Route::get('/users/', [UserController::class, 'index'])->name('users.index');
+    Route::get('/user/', [UserController::class, 'create'])->name('user.ceate');
+    Route::post('/user/', [UserController::class, 'store'])->name('user.save');
+    Route::get('/user/edit/{id}/', [UserController::class, 'edit'])->name('user.edit');
+    Route::put('/user/edit/{id}/', [UserController::class, 'update'])->name('users.update');
+    Route::delete('/user/delete/{id}/', [UserController::class, 'destroy'])->name('users.delete');
+
+    Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
 });

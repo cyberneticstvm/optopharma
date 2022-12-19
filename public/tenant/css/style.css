@@ -7,3 +7,26 @@
     background-color: var(--bs-gray-200);
     /*color: #fff !important;*/
 }
+.card{
+    border-radius: 0 !important;
+}
+.table>:not(:last-child)>:last-child>*{
+    border-bottom: 1px solid #344767 !important;
+}
+.table.dataTable thead th, table.dataTable thead td{
+    border-bottom: 1px solid #344767 !important;
+}
+tr:nth-child(odd) {
+    background-color: #fff !important;
+}
+tr:nth-child(even) {
+    background-color: #fff !important;
+}
+.table.dataTable thead th, table.dataTable tfoot th{
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--bs-gray-900);
+}
+td{
+    color: #000 !important;
+}
