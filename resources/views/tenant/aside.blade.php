@@ -123,26 +123,26 @@
             <ul class="nav nav-sm flex-column">
               <li class="nav-item">
                 <a class="nav-link text-white " href="/"0>
-                  <i class='fa fa-users sidenav-mini-icon'></i>
-                  <span class="sidenav-normal ms-2 ps-1">Users</span>
+                  <i class='fa fa-user sidenav-mini-icon'></i>
+                  <span class="sidenav-normal ms-2 ps-1">Profile</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white " href="/">
-                  <i class="fa fa-code-fork sidenav-mini-icon"></i>
-                  <span class="sidenav-normal ms-2 ps-1">Branches</span>
+                  <i class="fa fa-flag sidenav-mini-icon"></i>
+                  <span class="sidenav-normal ms-2 ps-1">Country/Region</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white " href="/">
-                  <i class="fa fa-truck sidenav-mini-icon"></i>
-                  <span class="sidenav-normal ms-2 ps-1">Suppliers</span>
+                  <i class="fa fa-money sidenav-mini-icon"></i>
+                  <span class="sidenav-normal ms-2 ps-1">Tax & Discount</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white " href="/">
-                  <i class="fa fa-header sidenav-mini-icon"></i>
-                  <span class="sidenav-normal ms-2 ps-1">Heads</span>
+                  <i class="fa fa-file sidenav-mini-icon"></i>
+                  <span class="sidenav-normal ms-2 ps-1">Extras</span>
                 </a>
               </li>
             </ul>
