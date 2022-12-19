@@ -119,6 +119,34 @@
             </div>
             <span class="nav-link-text ms-1">Settings</span>
           </a>
+          <div class="collapse" id="admins">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <a class="nav-link text-white " href="/"0>
+                  <i class='fa fa-users sidenav-mini-icon'></i>
+                  <span class="sidenav-normal ms-2 ps-1">Users</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " href="/">
+                  <i class="fa fa-code-fork sidenav-mini-icon"></i>
+                  <span class="sidenav-normal ms-2 ps-1">Branches</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " href="/">
+                  <i class="fa fa-truck sidenav-mini-icon"></i>
+                  <span class="sidenav-normal ms-2 ps-1">Suppliers</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " href="/">
+                  <i class="fa fa-header sidenav-mini-icon"></i>
+                  <span class="sidenav-normal ms-2 ps-1">Heads</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Opticals</h6>
