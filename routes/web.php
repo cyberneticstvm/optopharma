@@ -18,4 +18,3 @@ Route::get('/', function () {
     return view('landlord.index');
 })->name('index');
 Route::post('/', [TenantRegistrationController::class, 'register'])->name('register');
-Route::get('/test', [TenantRegistrationController::class, 'test'])->name('test');

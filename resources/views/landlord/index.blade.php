@@ -7,80 +7,35 @@
     <meta content="" name="keywords">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>:: W3Elements.net :: Web elements creator</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <link rel="icon" href="{{ public_path().'/landlord/images/favicon-w3e.png' }}" type="image/x-icon"> <!-- Favicon-->
 
     <!-- project css file  -->
     <link rel="stylesheet" href="{{ public_path().'/landlord/css/al.style.min.css' }}">
 
     <!-- project layout css file -->
     <link rel="stylesheet" href="{{ public_path().'/landlord/css/al.project.min.css' }}">
+    <link rel="stylesheet" href="{{ public_path().'/landlord/css/style.css' }}">
 </head>
 
 <body class="font-raleway">
-    <div id="mainDiv" class="theme-orange">
+    <div id="mainDiv" class="theme-cyan">
 
         <!-- Top Header -->
         <nav class="navbar navbar-expand-lg py-lg-3 lp-menu">
             <div class="container">
-                <a class="navbar-brand fw-bold text-primary fs-2" href="index.html" title="Logo">ALUI</a>
+                <a class="navbar-brand fw-bold text-primary fs-2 logo" href="/">
+                    <img src="{{ public_path().'/landlord/images/logo-w3e.png' }}" class="img-fluid" width="25%"/>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
                     <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-6">
                         <li class="nav-item"><a class="nav-link me-2" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link me-2" href="#">Key Future</a></li>
-                        <li class="nav-item"><a class="nav-link me-2" href="#">Risks Management</a></li>
-                        <li class="nav-item"><a class="nav-link me-2" href="#">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link me-2" href="#">Products</a></li>
+                        <li class="nav-item"><a class="nav-link me-2" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link me-2" href="#">Contact</a></li>
                     </ul>
-                    <form class="d-flex">
-                        <div class="dropdown Language d-none d-sm-block">
-                            <a class="nav-link dropdown-toggle pulse mx-3" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="fa fa-language"></i>
-                            </a>
-                            <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-end p-0" data-bs-popper="none">
-                                <div class="card border-0">
-                                    <div class="card-body">
-                                        <ul class="list-unstyled menu-grid d-flex flex-wrap mb-0 rounded mx-auto">
-                                            <li><a class="m-link active" href="#">
-                                                <svg class="avatar mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
-                                                    <circle style="fill:#f0f0f0" cx="256" cy="256" r="256"/>
-                                                    <path style="fill:#d80027" d="M244.87 256H512c0-23.106-3.08-45.49-8.819-66.783H244.87V256zm0-133.565h229.556a257.35 257.35 0 0 0-59.07-66.783H244.87v66.783zM256 512c60.249 0 115.626-20.824 159.356-55.652H96.644C140.374 491.176 195.751 512 256 512zM37.574 389.565h436.852a254.474 254.474 0 0 0 28.755-66.783H8.819a254.474 254.474 0 0 0 28.755 66.783z"/>
-                                                    <path style="fill:#0052b4" d="M118.584 39.978h23.329l-21.7 15.765 8.289 25.509-21.699-15.765-21.699 15.765 7.16-22.037a257.407 257.407 0 0 0-49.652 55.337h7.475l-13.813 10.035a255.58 255.58 0 0 0-6.194 10.938l6.596 20.301-12.306-8.941a253.567 253.567 0 0 0-8.372 19.873l7.267 22.368h26.822l-21.7 15.765 8.289 25.509-21.699-15.765-12.998 9.444A258.468 258.468 0 0 0 0 256h256V0c-50.572 0-97.715 14.67-137.416 39.978zm9.918 190.422-21.699-15.765L85.104 230.4l8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083 8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zM220.328 230.4l-21.699-15.765L176.93 230.4l8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765 8.289 25.509zm-8.289-100.083 8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765zm0-74.574 8.289 25.509-21.699-15.765-21.699 15.765 8.289-25.509-21.7-15.765h26.822l8.288-25.509 8.288 25.509h26.822l-21.7 15.765z"/>
-                                                </svg>
-                                                <span>USA</span></a>
-                                            </li>
-                                            <li><a class="m-link" href="#">
-                                                <svg class="avatar mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
-                                                    <circle style="fill:#f0f0f0" cx="256" cy="256" r="256"/>
-                                                    <path style="fill:#d80027" d="M512 256c0-110.071-69.472-203.906-166.957-240.077v480.155C442.528 459.906 512 366.071 512 256z"/>
-                                                    <path style="fill:#0052b4" d="M0 256c0 110.071 69.473 203.906 166.957 240.077V15.923C69.473 52.094 0 145.929 0 256z"/>
-                                                </svg>
-                                                <span>France</span></a>
-                                            </li>
-                                            <li><a class="m-link" href="#">
-                                                <svg class="avatar mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
-                                                    <circle style="fill:#f0f0f0" cx="256" cy="256" r="256"/>
-                                                    <path style="fill:#d80027" d="M512 256c0-101.494-59.065-189.19-144.696-230.598v461.195C452.935 445.19 512 357.494 512 256z"/>
-                                                    <path style="fill:#6da544" d="M0 256c0 101.494 59.065 189.19 144.696 230.598V25.402C59.065 66.81 0 154.506 0 256zm189.217 0c0 36.883 29.9 66.783 66.783 66.783s66.783-29.9 66.783-66.783v-22.261H189.217V256z"/>
-                                                    <path style="fill:#ff9811" d="M345.043 211.478H278.26c0-12.294-9.967-22.261-22.261-22.261s-22.261 9.967-22.261 22.261h-66.783c0 12.295 10.709 22.261 23.002 22.261h-.741c0 12.295 9.966 22.261 22.261 22.261 0 12.295 9.966 22.261 22.261 22.261h44.522c12.295 0 22.261-9.966 22.261-22.261 12.295 0 22.261-9.966 22.261-22.261h-.742c12.295 0 23.003-9.966 23.003-22.261z"/>
-                                                </svg>
-                                                <span>Mexico</span></a>
-                                            </li>
-                                            <li><a class="m-link" href="#">
-                                                <svg class="avatar mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve">
-                                                    <path style="fill:#ffda44" d="M0 256c0 31.314 5.633 61.31 15.923 89.043L256 367.304l240.077-22.261C506.367 317.31 512 287.314 512 256s-5.633-61.31-15.923-89.043L256 144.696 15.923 166.957C5.633 194.69 0 224.686 0 256z"/>
-                                                    <path style="fill:#d80027" d="M496.077 166.957C459.906 69.473 366.071 0 256 0S52.094 69.473 15.923 166.957h480.154zM15.923 345.043C52.094 442.527 145.929 512 256 512s203.906-69.473 240.077-166.957H15.923z"/>
-                                                </svg>
-                                                <span>Spain</span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-dark rounded text-uppercase" type="submit">Login</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -104,9 +59,9 @@
                     <div class="col-xl-6 col-lg-7 co-12">
                         <div class="inner-content p-md-0 p-lg-3 p-xl-4">
                             <div class="hero-text">
-                                <h1 class="bg-text">Manage Your <span class="text-gradient fw-bold">Project</span> From Your Team</h1>
-                                <p class="color-500 lead mb-4">Good planing will lead to bettar work.Palan work, Keep Projects on track, and manage teamwork easily with PlanDone</p>
-                                <button type="submit" class="btn px-4 py-3 lift btn-primary text-uppercase">Try for free</button>
+                                <h1 class="bg-text">Ease Your <span class="text-gradient fw-bold">Business</span> Activities</h1>
+                                <p class="color-500 lead mb-4">Good product will lead to bettar result. Plan work, Keep activities on track, and manage production easily with our Products</p>
+                                <button type="submit" class="btn px-4 py-3 lift btn-primary text-uppercase">Our Products</button>
                                 <a href="https://www.youtube.com/embed/vWfOS1br8pk" target="_blank" class="btn px-4 py-3 lift color-800 text-uppercase" title="#"><i class="fa fa-youtube fa-lg px-2 text-secondary" aria-hidden="true"></i>Watch How it Work</a>
                             </div>
                         </div>
@@ -377,15 +332,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
-                            <p>Designed and Developed by<a href="https://www.thememakker.com/" rel="nofollow" target="_blank">ThemeMakker</a></p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <ul class="list-unstyled d-flex justify-content-md-end">
-                                <li><a class="p-2 ms-2" href="#">Terms of use</a></li>
-                                <li><a class="p-2 ms-2" href="#"> Privacy Policy</a></li>
-                                <li><a class="p-2 ms-2" href="#">Faq</a></li>
-                                <li><a class="p-2 ms-2" href="#">Contact</a></li>
-                            </ul>
+                            <p>© {{ date('Y') }} w3elements.net</p>
                         </div>
                     </div>
                 </div>

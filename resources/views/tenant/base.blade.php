@@ -34,9 +34,10 @@
   <link href="{{ public_path().'/tenant/css/nucleo-svg.css' }}" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ public_path().'/tenant/css/soft-ui-dashboard.css?v=1.0.7' }}" rel="stylesheet" />
+  <link id="pagestyle" href="{{ public_path().'/tenant/css/style.css' }}" rel="stylesheet" />
 </head>
 
-<body class="g-sidenav-show  bg-gray-100">
+<body class="g-sidenav-show bg-gray-100">
   @include('tenant.aside')
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     @include('tenant.navbar')
