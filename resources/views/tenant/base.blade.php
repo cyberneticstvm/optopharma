@@ -20,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ public_path().'/tenant/img/apple-icon.png' }}">
-  <link rel="icon" type="image/png" href="{{ public_path().'/tenant/img/favicon.png' }}">
+  <link rel="icon" type="image/png" href="{{ public_path().'/tenant/img/favicon-w3e.png' }}">
   <title>
     OptoPharma by w3elements.net
   </title>
@@ -53,7 +53,7 @@
                 </script>,
                 made with <i class="fa fa-heart"></i> by
                 <a href="https://w3elements.net" class="font-weight-bold" target="_blank">w3elements.net</a>
-                for a better productivity.
+                for better productivity.
               </div>
             </div>
             <div class="col-lg-6">
