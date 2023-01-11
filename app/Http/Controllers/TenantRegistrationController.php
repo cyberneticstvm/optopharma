@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Tenant;
 use Carbon\Carbon;
+use Artisan;
 use Hash;
 use DB;
 
@@ -37,10 +38,11 @@ class TenantRegistrationController extends Controller
             $tenant->domains()->create(['domain' => $request->domain.'.'.$this->central_domain]);                
             DB::table('users')->insert(['name' => $request->name, 'email' => $request->email, 'tenant_id' => $request->domain, 'domain' => $request->domain.'.'.$this->central_domain,'db_name' => $this->db_prefix.$request->domain, 'db_password' => $db_pwd,'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]);
             Config::set('database.connections.mysql_tenant.database', $this->db_prefix.$request->domain);
-            DB::reconnect('mysql_tenant');
             //Config::set('database.connections.mysql.username', $request->domain);
             //Config::set('database.connections.mysql.password', $db_pwd);
+            DB::reconnect('mysql_tenant');
             DB::connection('mysql_tenant')->table('users')->insert(['name' => $request->name, 'email' => $request->email, 'password' => Hash::make($request->password)]);
+            Artisan::call("db:seed", ['--class' => 'PermissionTableSeeder']);
             //Config::set('database.connections.mysql.database', env('DB_DATABASE', 'forge'));
             DB::reconnect('mysql');                        
         }catch(Exception $e){

@@ -8,6 +8,7 @@ use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,11 +41,18 @@ Route::group([
     Route::get('/dash/', [AuthController::class, 'dash'])->name('dash');
 
     Route::get('/users/', [UserController::class, 'index'])->name('users.index');
-    Route::get('/user/', [UserController::class, 'create'])->name('user.ceate');
-    Route::post('/user/', [UserController::class, 'store'])->name('user.save');
+    Route::get('/user/create/', [UserController::class, 'create'])->name('user.create');
+    Route::post('/user/create/', [UserController::class, 'store'])->name('user.save');
     Route::get('/user/edit/{id}/', [UserController::class, 'edit'])->name('user.edit');
     Route::put('/user/edit/{id}/', [UserController::class, 'update'])->name('users.update');
     Route::delete('/user/delete/{id}/', [UserController::class, 'destroy'])->name('users.delete');
+
+    Route::get('/roles/', [RoleController::class, 'index'])->name('roles.index');
+    Route::get('/roles/create/', [RoleController::class, 'create'])->name('roles.create');
+    Route::post('/roles/create/', [RoleController::class, 'store'])->name('roles.save');
+    Route::get('/roles/edit/{id}/', [RoleController::class, 'edit'])->name('roles.edit');
+    Route::put('/roles/edit/{id}/', [RoleController::class, 'update'])->name('roles.update');
+    Route::delete('/roles/delete/{id}/', [RoleController::class, 'destroy'])->name('roles.delete');
 
     Route::get('/logout/', [AuthController::class, 'logout'])->name('logout');
 });

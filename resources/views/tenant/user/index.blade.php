@@ -4,7 +4,10 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="font-weight-bolder">User Register</h4>
+                <div class="row">
+                    <div class="col-6"><h4 class="font-weight-bolder">User Register</h4></div>
+                    <div class="col-6 text-end"><a class="btn bg-gradient-primary" href="/user/create/">New User +</a></div>
+                </div>
             </div>
             <div class="card-body table-responsive">
                 <table class="table table-bordered table-striped" id="dataTable">

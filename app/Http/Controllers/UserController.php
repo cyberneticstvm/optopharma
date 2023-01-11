@@ -15,6 +15,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    function __construct(){
+
+    }
+    
     public function index()
     {
         $users = User::orderBy('name', 'asc')->get();
@@ -28,7 +32,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $roles = [];
+        return view('tenant.user.create', compact('roles'));
     }
 
     /**
